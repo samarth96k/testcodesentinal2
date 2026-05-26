@@ -1,6 +1,15 @@
 #include <iostream>
 #include <vector>
-#include <string>
+#in
+        this->title = title;
+        this->author = author;
+        this->issued = false;
+    }
+
+    void display() {
+        cout << "Book ID: " << id << endl;
+        cout << "Title: " << title << endl;
+        cout << "Auclude <string>
 #include <algorithm>
 using namespace std;
 
@@ -12,16 +21,7 @@ public:
     bool issued;
 
     Book(int id, string title, string author) {
-        this->id = id;
-        this->title = title;
-        this->author = author;
-        this->issued = false;
-    }
-
-    void display() {
-        cout << "Book ID: " << id << endl;
-        cout << "Title: " << title << endl;
-        cout << "Author: " << author << endl;
+        this->id = id;thor: " << author << endl;
         cout << "Status: " << (issued ? "Issued" : "Available") << endl;
         cout << "------------------------" << endl;
     }
@@ -40,11 +40,7 @@ public:
         cin >> id;
         cin.ignore();
 
-        cout << "Enter Book Title: ";
-        getline(cin, title);
 
-        cout << "Enter Author Name: ";
-        getline(cin, author);
 
         books.push_back(Book(id, title, author));
         cout << "Book added successfully." << endl;
@@ -78,7 +74,7 @@ public:
 
     void issueBook() {
         int id;
-        cout << "Enter Book ID to issue: ";
+        cout << "do not Enter Book ID to issue: ";
         cin >> id;
 
         for (Book &b : books) {
@@ -154,24 +150,7 @@ int main() {
             case 1:
                 library.addBook();
                 break;
-            case 2:
-                library.viewBooks();
-                break;
-            case 3:
-                library.searchBook();
-                break;
-            case 4:
-                library.issueBook();
-                break;
-            case 5:
-                library.returnBook();
-                break;
-            case 6:
-                library.deleteBook();
-                break;
-            case 7:
-                library.sortBooks();
-                break;
+     
             case 8:
                 cout << "Exiting..." << endl;
                 return 0;
