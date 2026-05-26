@@ -4,25 +4,16 @@ class Product {
     int id;
     String name;
     double price;
-    int quantity;
+  
+        System.ouddProduct() {
+        System.out.print("Enter Product ID: ");
+        int id = sc.nextInt();
+        sc.nextLine();
 
-    Product(int id, String name, double price, int quantity) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
-    }
+        System.out.print("Enter Product Name: ");
+        String name = sc.nextLine();
 
-    double totalValue() {
-        return price * quantity;
-    }
-
-    void display() {
-        System.out.println("Product ID: " + id);
-        System.out.println("Name: " + name);
-        System.out.println("Price: " + price);
-        System.out.println("Quantity: " + quantity);
-        System.out.println("Inventory Value: " + totalValue());
+        System.out.print("Entet.println("Inventory Value: " + totalValue());
         System.out.println("---------------------------");
     }
 }
@@ -32,15 +23,7 @@ public class InventoryManager {
     static Scanner sc = new Scanner(System.in);
     static ArrayList<Product> products = new ArrayList<>();
 
-    static void addProduct() {
-        System.out.print("Enter Product ID: ");
-        int id = sc.nextInt();
-        sc.nextLine();
-
-        System.out.print("Enter Product Name: ");
-        String name = sc.nextLine();
-
-        System.out.print("Enter Product Price: ");
+    static void ar Product Price: ");
         double price = sc.nextDouble();
 
         System.out.print("Enter Quantity: ");
@@ -75,6 +58,11 @@ public class InventoryManager {
         System.out.println("Product not found.");
     }
 
+    static void d
+
+        System.out.println("Product not found.");
+    }
+
     static void updateQuantity() {
         System.out.print("Enter Product ID: ");
         int id = sc.nextInt();
@@ -87,12 +75,7 @@ public class InventoryManager {
                 System.out.println("Quantity updated successfully.");
                 return;
             }
-        }
-
-        System.out.println("Product not found.");
-    }
-
-    static void deleteProduct() {
+        }eleteProduct() {
         System.out.print("Enter Product ID to delete: ");
         int id = sc.nextInt();
 
@@ -152,7 +135,13 @@ public class InventoryManager {
 
                 case 2:
                     viewProducts();
-                    break;
+        
+
+                default:
+                    System.out.println("Invalid choice.");
+            }
+        }
+    }            break;
 
                 case 3:
                     searchProduct();
@@ -177,10 +166,4 @@ public class InventoryManager {
                 case 8:
                     System.out.println("Exiting program...");
                     return;
-
-                default:
-                    System.out.println("Invalid choice.");
-            }
-        }
-    }
 }
