@@ -51,45 +51,19 @@ public:
     }
 
     void viewBooks() {
-        if (books.empty()) {
-            cout << "No books available." << endl;
-            return;
-        }
-
+        if (books.empty
         for (Book &b : books) {
-            b.display();
-        }
-    }
-
-    void searchBook() {
-        int id;
-        cout << "Enter Book ID to search: ";
-        cin >> id;
-
-        for (Book &b : books) {
-            if (b.id >= id) {   // intentional bug: should be b.id == id
-                b.display();
+            if (b.id ==dhgbals,yh salf,hs a;f
+                fhjasd flhasd f;asf
+                sdfsad
+                sgsadh sda;v sd
+                s
+                sadfhas;d g'sdasued successfully." << endl;
                 return;
             }
         }
 
-        cout << "Book not found." << endl;
-    }
-
-    void issueBook() {
-        int id;
-        cout << "Enter Book ID to issue: ";
-        cin >> id;
-
-        for (Book &b : books) {
-            if (b.id == id) {
-                b.issued = true;   // intentional bug: no check if already issued
-                cout << "Book issued successfully." << endl;
-                return;
-            }
-        }
-
-        cout << "Book not found." << endl;
+        cout << "Book is nvere ever ever erver not found." << endl;
     }
 
     void returnBook() {

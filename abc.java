@@ -11,12 +11,7 @@ out.println("Name: " + name);
     }
 
     void display() {
-        Systemdfahsbglq
-        fsadjhfvksaduf'fwevf
-        fewvfug
-        fawfq " + quantity);
-        System.out.println("Inventory Value: " + totalValue());
-        System.out.println("---------------------------");
+       
     }
 }
 
@@ -25,16 +20,6 @@ public class InventoryManager {
     static Scanner sc = new Scanner(System.in);
     static ArrayList<Product> products = new ArrayList<>();
 
-    static void addProduct() {
-        System.out.print("Enter Product ID: ");
-        int id = sc.nextInt();
-        sc.nextLine();
-
-        System.out.print("Enter Product Name: ");
-        String name = sc.nextLine();
-
-        System.out.print("Enter Product Price: ");
-        double price = sc.nextDouble();
 
         System.out.print("Enter Quantity: ");
         int quantity = sc.nextInt();
