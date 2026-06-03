@@ -1,36 +1,31 @@
 # Repository Memory
 
-This file stores long-term repository knowledge used during CodeSentinal reviews and wiki updates.
+This file stores long-term repository knowledge.
 
 ## Architectural Decisions
 
-### Memory ID: TEST003
+Document major architectural decisions.
 
-Created At: 2026-06-03T00:00:00.000Z
+---
+
+
+### Memory ID: f59db29b8789
+
+Created At: 2026-06-03T11:20:30.873Z
 
 **Reason**
 
-Review generation and wiki maintenance serve different purposes and should remain isolated.
+Standardizing external communication patterns.
 
 **Knowledge**
 
-Review mode is responsible for generating GitHub review comments. Wiki-update mode is responsible for maintaining repository knowledge, repository memory, and wiki documentation. The two pipelines should remain independent.
+External service interactions (GitHub API, Wiki updates) must be routed through `GitHubRetryService` to ensure consistent exponential backoff and retry logic. Do not implement manual retry loops in feature code.
 
 ---
 
 ## Known Constraints
 
-### Memory ID: TEST005
-
-Created At: 2026-06-03T00:00:00.000Z
-
-**Reason**
-
-GitHub review comments can only be attached to added lines in a pull request diff.
-
-**Knowledge**
-
-CodeSentinal review generation must never create comments targeting removed lines, unchanged lines, or context-only lines. All generated review comments must reference addedLines[].newLine values.
+Document repository limitations.
 
 ---
 
@@ -42,46 +37,10 @@ Document migrations and compatibility concerns.
 
 ## Review Findings
 
-### Memory ID: TEST004
-
-Created At: 2026-06-03T00:00:00.000Z
-
-**Reason**
-
-Large prompt payloads can exceed Gemini quota and token limits.
-
-**Knowledge**
-
-Global repository context should be sent once and shared across review chunks. Duplicating architecture, review rules, and repository memory for every chunk significantly increases prompt size and may cause quota exhaustion.
+Document recurring review findings and lessons.
 
 ---
 
 ## Integration Knowledge
 
-### Memory ID: TEST001
-
-Created At: 2026-06-03T00:00:00.000Z
-
-**Reason**
-
-GitHub API operations are vulnerable to transient failures, rate limiting, and network instability.
-
-**Knowledge**
-
-All GitHub API operations including review comment creation, wiki commits, file updates, and pull request interactions should be executed through executeGitHubWithRetry or equivalent retry wrappers.
-
----
-
-### Memory ID: TEST002
-
-Created At: 2026-06-03T00:00:00.000Z
-
-**Reason**
-
-Review quality depends on repository knowledge and architectural context.
-
-**Knowledge**
-
-Before sending review requests to Gemini, CodeSentinal should load architecture.md, review-rules.md, repository-memory.md, database-schema.md, and any available file-level wiki documents so that review decisions are based on repository-specific knowledge rather than assumptions.
-
----
+Document external integrations, workflows, and cross-system behavior.
