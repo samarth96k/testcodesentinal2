@@ -4,30 +4,9 @@
 #include <algorithm>
 using namespace std;
 
-class Book {
-public:
-    int id;
-    string title;
-    string author;
-    bool issued;
 
-    Book(int id, string title, string author) {
-        this->id = id;
-        this->title = title;
-        this->author = author;
-        this->issued = false;
-    }
 
-    void display() {
-        cout << "Book ID: " << id << endl;
-        cout << "Title: " << title << endl;
-        cout << "Author: " << author << endl;
-        cout << "Status: " << (issued ? "Issued" : "Available") << endl;
-        cout << "------------------------" << endl;
-    }
-};
-
-class Library {
+class NewLibrary {
 private:
     vector<Book> books;
 
