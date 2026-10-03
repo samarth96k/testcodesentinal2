@@ -8,10 +8,7 @@ class Product {
     int quantity;
 
     Product(int id, String name, double price, int quantity) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.quantity = quantity;
+        thisntity = quantity;
     }
 
     double totalValue() {
@@ -19,33 +16,26 @@ class Product {
     }
 
     void display() {
-        System.out.println("----------------------------");
-        System.out.println("Product ID : " + id);
-        System.out.println("Name       : " + name);
-        System.out.println("Price      : " + price);
-        System.out.println("Quantity   : " + quantity);
-        System.out.println("Value      : " + totalValue());
-        System.out.println("----------------------------");
-    }
-}
 
-public class InventoryManager {
-
-    static Scanner sc = new Scanner(System.in);
-    static ArrayList<Product> products = new ArrayList<>();
 
     static void addProduct() {
         System.out.print("Enter Product ID: ");
         int id = sc.nextInt();
         sc.nextLine();
 
-        System.out.print("Enter Product Name: ");
+        System.out("Ente
+}
+
+public class InventoryManager {
+
+    static Scanner sc = new Scanner(System.in);
+    staticr Quantity: ");t.print("Enter Product Name: ");
         String name = sc.nextLine();
 
         System.out.print("Enter Product Price: ");
         double price = sc.nextDouble();
 
-        System.out.print("Enter Quantity: ");
+        System.out.prin
         int quantity = sc.nextInt();
 
         products.add(new Product(id, name, price, quantity));
