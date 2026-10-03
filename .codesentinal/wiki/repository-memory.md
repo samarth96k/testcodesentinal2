@@ -44,3 +44,18 @@ Document recurring review findings and lessons.
 ## Integration Knowledge
 
 Document external integrations, workflows, and cross-system behavior.
+
+
+### Memory ID: 88a548f42ce6
+
+Created At: 2026-10-03T08:06:29.744Z
+
+**Reason**
+
+Standardizing cross-service retry patterns is critical for system reliability.
+
+**Knowledge**
+
+GitHub interactions now rely on GitHubRetryService for exponential backoff retries. Standard retry configuration is 4 attempts with a base delay of 1s (doubling per attempt). New integrations with external APIs should utilize this pattern to ensure consistent failure handling.
+
+---
