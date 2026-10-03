@@ -25,3 +25,19 @@ None identified.
 
 # Repository Memory
 This component serves as the gateway for all GitHub-related infrastructure interactions. Any changes to this file directly impact the ability of the system to manage pull requests or communicate with GitHub services. Reviewers should verify that API call patterns remain consistent with GitHub's current best practices.
+
+---
+
+## Repository Memory Entry
+
+Memory ID: dbf584afeccf
+
+Created At: 2026-10-03T08:06:29.744Z
+
+### Reason
+
+Established responsibility for reliable GitHub API interaction handling.
+
+### Knowledge
+
+GitHubRetryService manages retry logic using exponential backoff (base delay 1s, 4 attempts). Future modifications to retry policy (e.g., changing max attempts) must be reflected in getRetryConfiguration to maintain downstream visibility.
