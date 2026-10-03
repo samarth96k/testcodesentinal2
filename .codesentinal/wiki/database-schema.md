@@ -9,3 +9,19 @@ Once you provide the source code or definitions (e.g., TypeScript interfaces, JS
 *   **Focus on Validation/Payloads:** Defining the rules and structures of the data as they exist in your repository.
 
 **Please paste the contract files below.**
+
+---
+
+## Repository Memory Entry
+
+Memory ID: 8ebae09f99f1
+
+Created At: 2026-10-03T08:06:29.744Z
+
+### Reason
+
+The GitHubRetryService defines a standardized output schema for pull request comments and wiki updates, requiring future integrations to follow this structural contract.
+
+### Knowledge
+
+Added GitHubRetryService to manage GitHub interactions. All service methods return a consistent result array containing at least a 'status' field. Future service additions should mirror this response structure to ensure compatibility with existing error handling and reporting logic.
